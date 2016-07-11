@@ -1,0 +1,2 @@
+# SQLpractice
+SQL exercises
