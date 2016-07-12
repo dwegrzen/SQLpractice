@@ -94,7 +94,7 @@ sum(quantity*price)|item_id|sum(quantity)|title|price
 399302|46|53|Practical Rubber Computer|7534
 329076|45|44|Ergonomic Cotton Chair|7479
 
-What user spent the most?
+2. What user spent the most?
 select sum(quantity*price),first_name,last_name,count(users.id) from users inner join orders on users.id = user_id inner join items on items.id = orders.item_id group by users.id order by sum(quantity*price) desc limit 5;
 sum(quantity*price)|first_name|last_name|count(users.id)
 639386|Hassan|Runte|15
@@ -103,9 +103,14 @@ sum(quantity*price)|first_name|last_name|count(users.id)
 405918|Phoebe|Kshlerin|13
 342594|Monserrate|Legros|15
 
-What were the top 3 highest grossing categories?
+3. What were the top 3 highest grossing categories?
 select sum(quantity*price), category from orders inner join items on items.id = orders.item_id group by category order by sum(quantity*price) desc limit 3;
 sum(quantity*price)|category
 525240|Music, Sports & Clothing
 449496|Beauty, Toys & Sports
 448410|Sports
+
+Epic Mode
+
+See screenshot below for epic sqlteaching.com completion saved in folder.
+Screen Shot 2016-07-11 at 9.28.27 PM
